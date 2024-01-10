@@ -11,6 +11,8 @@
     <!-- The version of this project. SNAPSHOT means "we're still working on it" -->
     <packaging>war</packaging>
     <version>1.0-SNAPSHOT</version>
+    <name>my-app</name>
+    <url>http://maven.apache.org</url>
 
     <properties>
         <!-- Tell Maven we want to use Java 8 -->
