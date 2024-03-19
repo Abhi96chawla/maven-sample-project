@@ -35,8 +35,8 @@ RUN mvn clean package -DskipTests=true
 
 FROM eclipse-temurin:17-jdk-alpine as prod
 RUN mkdir /app
-COPY --from=builder /app/target/*.jar /app/app.jar
+COPY --from=builder /app/target/*.jar /app/javaparser-maven-sample-1.0-SNAPSHOT-shaded.jar
 ENV SERVER_PORT=8000
 WORKDIR /app
 EXPOSE 8000
-ENTRYPOINT ["java","-jar","/app.jar"]
+ENTRYPOINT ["java","-jar","/javaparser-maven-sample-1.0-SNAPSHOT-shaded.jar"]
