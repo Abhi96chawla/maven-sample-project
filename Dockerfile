@@ -7,6 +7,6 @@ COPY . .
 RUN apt-get update && \
     apt-get install -y maven && \
     mvn clean package
-COPY target/*.jar /usr/local/tomcat/webapps/
+COPY /usr/local/tomcat/target/*.jar /usr/local/tomcat/webapps/
 EXPOSE 8000
 CMD ["/usr/local/tomcat/bin/catalina.sh", "run"]
