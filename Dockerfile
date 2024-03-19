@@ -18,7 +18,7 @@ RUN apt-get update && \
     apt-get install -y maven && \
     mvn clean package
     
-ADD target/javaparser-maven-sample-1.0-SNAPSHOT.jar javaparser-maven-sample-1.0-SNAPSHOT.jar
+#ADD target/javaparser-maven-sample-1.0-SNAPSHOT.jar javaparser-maven-sample-1.0-SNAPSHOT.jar
 #ADD target/javaparser-maven-sample-1.0-SNAPSHOT-shaded.jar javaparser-maven-sample-1.0-SNAPSHOT-shaded.jar
 ENTRYPOINT ["java", "-jar","javaparser-maven-sample-1.0-SNAPSHOT.jar"]
 EXPOSE 8000
