@@ -7,6 +7,6 @@ ADD pom.xml .
 RUN apt-get update && \
     apt-get install -y maven && \
     mvn clean package
-COPY /usr/local/tomcat/target/javaparser-maven-sample-1.0-SNAPSHOT*.jar /usr/local/tomcat/webapps/
+COPY /usr/local/tomcat/target/* /usr/local/tomcat/webapps/
 EXPOSE 8000
 CMD ["/usr/local/tomcat/bin/catalina.sh", "run"]
