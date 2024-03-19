@@ -36,7 +36,7 @@ RUN mvn clean package -DskipTests=true
 FROM eclipse-temurin:17-jdk-alpine as prod
 RUN mkdir /app
 COPY --from=builder /app/target/*.jar /app/app.jar
-ENV SERVER_PORT=6060
+ENV SERVER_PORT=8000
 WORKDIR /app
-EXPOSE 6060
+EXPOSE 8000
 ENTRYPOINT ["java","-jar","/app.jar"]
