@@ -30,7 +30,7 @@
 
     <!-- This blob of configuration tells Maven to make the jar executable. You can run it with:
     mvn clean package
-    java -jar target/appdemo.jar
+    java -jar target/javaparser-maven-sample.jar
     -->
     <build>
         <plugins>
